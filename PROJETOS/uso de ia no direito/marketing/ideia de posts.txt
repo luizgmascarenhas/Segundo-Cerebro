@@ -1,0 +1,61 @@
+Os Riscos Ocultos da IA Genérica: LGPD e Sigilo
+Profissional
+A adoção de ferramentas de Inteligência Artificial (IA) generativa, como ChatGPT, Gemini e
+Claude, trouxe ganhos inegáveis de produtividade para a advocacia. No entanto, o uso
+indiscriminado das versões públicas e gratuitas dessas ferramentas representa um risco crítico
+à segurança da informação, à privacidade dos clientes e ao sigilo profissional
+
+
+O que são “alucinações” dos Modelos de linguagem (LLMs)
+O Perigo das “Alucinações” Jurídicas
+Além dos riscos de privacidade, as IAs genéricas apresentam um problema técnico grave: as
+“alucinações”. Modelos de linguagem (LLMs) não são bancos de dados de pesquisa; eles são
+motores de predição de texto. Eles calculam a probabilidade da próxima palavra com base no
+contexto, o que pode resultar na geração de informações factualmente incorretas, mas que
+parecem extremamente convincentes [2].
+No contexto jurídico, isso se traduz na invenção de jurisprudências, leis e doutrinas. Entre 2024
+e 2025, diversos tribunais brasileiros (como TJ-PR, TJ-SC, TRT-MG e TRT-CE) registraram
+casos de advogados punidos por apresentarem petições com citações falsas geradas por IA [2].
+Em um caso notório no TJ-PR, um recurso continha 43 jurisprudências completamente fictícias,
+resultando no não conhecimento do recurso e em sanções ao profissional 
+
+Dica: Anonimização e Pseudonimização: Adotar a prática de remover ou mascarar dados
+identificadores (nomes, CPFs, valores exatos) antes de inserir qualquer texto em uma IA,
+mesmo nas versões corporativas
+
+Como o uso errado de IA pode gerar Violações à LGPD (Lei Geral de Proteção de Dados)
+O uso de IAs públicas com dados reais de clientes viola múltiplos princípios da LGPD (Lei nº
+13.709⁄2018):
+Princípio da Finalidade e Necessidade (Art. 6º, I e III): Os dados do cliente foram
+coletados para a prestação de serviços jurídicos, não para o treinamento de algoritmos de
+empresas de tecnologia.
+Princípio da Transparência (Art. 6º, V): O titular dos dados raramente é informado de que
+suas informações serão processadas por uma IA de terceiros.
+Base Legal (Art. 7º): O tratamento de dados por IAs públicas geralmente carece de uma
+base legal válida, como o consentimento explícito do titular para essa finalidade específica. Transferência Internacional de Dados: Muitas dessas ferramentas processam dados em
+servidores fora do Brasil, o que exige salvaguardas adicionais previstas na LGPD [1
+
+
+A Recomendação nº 001/2024 do Conselho Federal da OAB
+Aprovada em novembro de 2024, a Recomendação nº 001/2024 da OAB estabelece os pilares
+éticos para o uso da IA generativa na prática jurídica [3]. O documento não proíbe o uso da
+tecnologia, mas impõe responsabilidades rigorosas:
+1. Legislação Aplicável: O uso da IA deve respeitar o Estatuto da Advocacia, o Código de
+Ética, a LGPD e o Código de Processo Civil [3].
+2. Confidencialidade e Privacidade: O advogado deve zelar pelo sigilo profissional ao inserir
+dados em sistemas de IA, evitando tornar o cliente identificável. É exigida diligência naescolha da ferramenta, priorizando aquelas que não utilizam os dados para treinamento [3].
+3. Prática Jurídica Ética e Supervisão Humana: A IA não possui capacidade postulatória e
+não pode substituir o julgamento profissional. A recomendação exige a revisão integral de
+todas as saídas geradas pela IA antes de sua apresentação em juízo, responsabilizando o
+advogado pela veracidade das informações (Art. 77 do CPC) [3].
+4. Transparência e Comunicação: O advogado deve informar o cliente, de forma clara e
+acessível, sobre o uso de ferramentas de IA na prestação dos serviços, explicando os
+propósitos, benefícios e riscos, e obtendo o consentimento informado
+
+
+Avaliação de Fornecedores: Analisar os Termos de Uso e as Políticas de Privacidade das
+ferramentas de IA ( unir com Guia Prático: Ferramentas de IA Seguras e Privadas para a Advocacia)
+
+
+
+
