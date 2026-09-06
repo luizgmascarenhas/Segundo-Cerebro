@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Negativa de Terapia ABA - Gabriel Direito & Saúde</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/3.4.0/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-dark: #1e293b;
+      --primary-gold: #d4a853;
+      --secondary-blue: #3b82f6;
+      --accent-green: #10b981;
+      --danger-red: #ef4444;
+      --light-gray: #f1f5f9;
+      --text-dark: #1e293b;
+      --text-medium: #64748b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      color: var(--text-dark);
+      margin: 0;
+      padding: 0;
+    }
+
+    .font-display {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, #0f172a 100%);
+      color: #fff;
+      padding: 8rem 2rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 50%);
+      animation: rotate 20s linear infinite;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      opacity: 0.9;
+    }
+
+    .hero .cta-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Problem Cards */
+    .problemas {
+      padding: 4rem 2rem;
+      background: var(--light-gray);
+    }
+
+    .problemas h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: var(--primary-dark);
+    }
+
+    .cards-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card .icon {
+      width: 48px;
+      height: 48px;
+      background: var(--primary-gold);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      color: var(--primary-dark);
+      font-size: 1.5rem;
+    }
+
+    /* Rights Section */
+    .direitos {
+      padding: 4rem 2rem;
+    }
+
+    .direitos h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: var(--primary-dark);
+    }
+
+    .icones-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .icone {
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    .icone .icon {
+      width: 48px;
+      height: 48px;
+      background: var(--secondary-blue);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      color: #fff;
+      font-size: 1.5rem;
+    }
+
+    /* 4-Step Process */
+    .processo {
+      padding: 4rem 2rem;
+      background: var(--primary-dark);
+      color: #fff;
+    }
+
+    .processo h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .passos-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .passo {
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .passo .numero {
+      width: 48px;
+      height: 48px;
+      background: var(--primary-gold);
+      color: var(--primary-dark);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0 auto 1rem;
+    }
+
+    /* FAQ Section */
+    .faq {
+      padding: 4rem 2rem;
+      background: var(--light-gray);
+    }
+
+    .faq h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: var(--primary-dark);
+    }
+
+    .faq-container max-width: 1200px;
+    margin: 0 auto;
+
+    .faq-item {
+      background: white;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .faq-pergunta {
+      padding: 1.5rem;
+      background: #f8fafc;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--primary-dark);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .faq-pergunta:hover {
+      background: #e2e8f0;
+    }
+
+    .faq-resposta {
+      padding: 0 1.5rem 1.5rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      background: white;
+      font-size: 0.875rem;
+      color: var(--text-medium);
+      line-height: 1.6;
+    }
+
+    .faq-item.aberto .faq-resposta {
+      max-height: 200px;
+    }
+
+    .seta {
+      float: right;
+      color: var(--primary-gold);
+      font-size: 0.6rem;
+      transition: transform 0.3s;
+    }
+
+    .faq-item.aberto .seta {
+      transform: rotate(180deg);
+    }
+
+    /* Urgency Section */
+    .urgencia {
+      padding: 4rem 2rem;
+      background: var(--primary-dark);
+      color: #fff;
+      position: relative;
+    }
+
+    .urgencia::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
+    }
+
+    .urgencia .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .urgencia h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .urgencia p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+    }
+
+    /* WhatsApp CTA */
+    .cta-final {
+      background: var(--primary-gold);
+      color: var(--primary-dark);
+      padding: 2rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .cta-final h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .cta-final p {
+      font-size: 0.875rem;
+      opacity: 0.9;
+      margin: 0;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      background: #25d366;
+      color: #fff;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      padding: 3rem 2rem;
+      background: #0f172a;
+      color: #94a3b8;
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--primary-gold);
+      text-decoration: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 2.5rem; }
+      .hero p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Seu plano de saúde negou a terapia ABA do seu filho autista?</h1>
+    <p>Você tem direito à terapia integral, sem limitações abusivas. Não deixe o desenvolvimento do seu filho em pausa.</p>
+    <div class="cta-wrapper">
+      <a href="https://wa.me/5511987654321" class="whatsapp-btn" target="_blank">
+        Fale agora com um especialista
+      </a>
+    </div>
+  </section>
+
+  <!-- Problem Cards -->
+  <section class="problemas">
+    <h2>Principais motivos de negativa</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="icon">📋</div>
+        <h3>Limitação de sessões</h3>
+        <p>O plano impõe teto máximo de horas/sessões sem justificativa técnica.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🏥</div>
+        <h3>Clínica fora da rede</h3>
+        <p>A terapia solicitada não consta na rede credenciada do plano.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📅</div>
+        <h3>Carência prolongada</h3>
+        <p>Plano alega carência para tratamento que já deveria ser coverage imediato.</p>
+      </div>
+      <div class="card">
+        <div class="icon">💰</div>
+        <h3>Coparticipação abusiva</h3>
+        <p>Valor cobrado a título de coparticipação excede o limite legal da mensalidade.</p>
+      </div>
+      <div class="card">
+        <div class="icon">❌</div>
+        <h3>Negativa total</h3>
+        <p>Terapia ABA considerada "não coberta" pelo contrato, apesar de protocolo ANS.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rights Section -->
+  <section class="direitos">
+    <h2>Seus direitos garantidos por lei</h2>
+    <div class="icones-grid">
+      <div class="icone">
+        <div class="icon">📜</div>
+        <h3>Terapia integral</h3>
+        <p>Art. 19 da Lei 9.656/98 — cobertura de todas as terapias comprovadamente necessárias.</p>
+      </div>
+      <div class="icone">
+        <div class="icon">⚖️</div>
+        <h3>Limite de sessões ilegal</h3>
+        <p>Tema 1.295 do STJ (2026): proibição de limitação numérica de sessões para TEA.</p>
+      </div>
+      <div class="icone">
+        <div class="icon">🏥</div>
+        <h3>Rede credenciada</h3>
+        <p>Obrigatoriedade de cobertura em clínica de escolha da família, não apenas na rede fechada.</p>
+      </div>
+      <div class="icone">
+        <div class="icon">💵</div>
+        <h3>Coparticipação limitada</h3>
+        <p>Limite legal: coparticipação não pode exceder o valor da mensalidade do plano.</p>
+      </div>
+      <div class="icone">
+        <div class="icon">👨‍👩‍👧</div>
+        <h3>Prioridade neuropsic</h3>
+        <p>Lei do Autismo (12.764/2012) — prioridade em tratamentos para TEA em plano de saúde.</p>
+      </div>
+      <div class="icone">
+        <div class="icon">🌐</div>
+        <h3>Atendimento nacional</h3>
+        <p>Processos digitais — não importa sua cidade, garantimos seus direitos em qualquer lugar.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4-Step Process -->
+  <section class="processo">
+    <h2>Como garantimos seu direito</h2>
+    <div class="passos-grid">
+      <div class="passo">
+        <div class="numero">1</div>
+        <h3>Análise do caso</h3>
+        <p>Revisamos toda a negativa, contrato e histórico médico para identificar a melhor estratégia.</p>
+      </div>
+      <div class="passo">
+        <div class="numero">2</div>
+        <h3>Definição da estratégia</h3>
+        <p>Definimos ação liminar ou judicial baseada no Tema 1.295/STJ e jurisprudência favorável.</p>
+      </div>
+      <div class="passo">
+        <div class="numero">3</div>
+        <h3>Pedido urgente</h3>
+        <protocol>Solicitamos liminar para garantir a terapia imediatamente enquanto processo corre.</p>
+      </div>
+      <div class="passo">
+        <div class="numero">4</div>
+        <h3>Acompanhamento completo</h3>
+        <p>Gerenciamos todo o processo, desde a primeira audiência até o cumprimento da decisão.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq">
+    <h2>Perguntas frequentes</h2>
+    <div class="faq-container">
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-pergunta">Quanto tempo demora uma ação de negativa de terapia ABA?</div>
+        <span class="seta">▼</span>
+      </div>
+      <div class="faq-resposta" id="faq1">
+        <p>Com pedido de liminar, o tratamento pode ser garantido em até 30 dias. O processo judicial completo costuma durar de 6 a 18 meses, mas a terapia já começa enquanto o caso tramita.</p>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-pergunta">Quais documentos são necessários?</div>
+        <span class="seta">▼</span>
+      </div>
+      <div class="faq-resposta" id="faq2">
+        <p>Laudo de diagnóstico de TEA, relatórios médicos/terapêuticos, cópia do contrato/benefício e negativa formal do plano. Com esses documentos já conseguimos identificar o caminho jurídico mais rápido.</p>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-pergunta">Há garantia de resultado?</div>
+        <span class="seta">▼</span>
+      </div>
+      <div class="faq-resposta" id="faq3">
+        <p>Não prometemos "vitória certa", mas garantimos que todos os recursos legais serão executados. O Tema 1.295 do STJ já consolidou entendimento favorável em mais de 100 decisões sobre limitação de sessões para TEA.</p>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-pergunta">O plano pode me cancelar ou retalhar depois que processar?</div>
+        <span class="seta">▼</span>
+      </div>
+      <div class="faq-resposta" id="faq4">
+        <p>Ilegal. Art. 373 do CPC e Súmula 608 do STJ prohibem retaliação. Após o processo, o plano passa a tratar o caso com mais respeito e não há registros de cancelamento indevido após ação.</p>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-pergunta">Vocês atendem fora de São Paulo?</div>
+        <span class="seta">▼</span>
+      </div>
+      <div class="faq-resposta" id="faq5">
+        <p>Sim! Atendemos nacionalmente via processo digital. Não precisamos que você esteja em São Paulo — todo o trâmite é eletrônico e a liminar pode ser concedida pelo tribunal da sua região.</p>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-pergunta">Por que agir agora? Há urgência?</div>
+        <span class="seta">▼</span>
+      </div>
+      <div class="faq-resposta" id="faq6">
+        <p>Cada mês sem terapia ABA compromete o desenvolvimento neuroplástico da criança (janela crítica até 6 anos). Além disso, o prazo prescricional é de 3 anos para reclamar valores e direitos — agir agora garante seus direitos completos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Urgency Section -->
+  <section class="urgencia">
+    <div class="container">
+      <h2>Por que agir agora?</h2>
+      <p>Cada dia sem terapia ABA é um dia a menos de progresso no desenvolvimento do seu filho. A neuroplasticidade infantil é máxima nos primeiros 6 anos — perder esse tempo é irreparável.</p>
+      <p>Além do impacto no desenvolvimento, há custo financeiro: o prazo prescricional é de apenas 3 anos para reclamar valores pagos a mais ou negociar reajustes. Não espere a operadora decidir pelo futuro do seu filho.</p>
+      <p style="font-size: 0.875mt; margin-top: 1rem; opacity: 0.8;">Tema 1.295 do STJ já garantiu decisões favoráveis para centenas de famílias — o entendimento jurídico consolidado a seu favor.</p>
+    </div>
+  </section>
+
+  <!-- WhatsApp CTA Final -->
+  <section class="cta-final">
+    <h3>Fale agora com um advogado especialista</h3>
+    <p>WhatsApp 24h — Sem compromisso inicial. Agendamos uma análise do seu caso.</p>
+    <a href="https://wa.me/5511987654321" class="whatsapp-btn" target="_blank">
+      Solicitar orientação jurídica agora
+    </a>
+  </section>
+
+  <footer>
+    <p>Gabriel Direito & Saúde — Especialista em Direito à Saúde Suplementar</p>
+    <p>© 2026 Todos os direitos reservados. <a href="#">Privacidade</a> | <a href="#">LGPD</a></p>
+  </footer>
+
+  <script>
+    function toggleFaq(item) {
+      item.classList.toggle('aberto');
+      const resposta = item.querySelector('.faq-resposta');
+      const seta = item.querySelector('.seta');
+      if (item.classList.contains('aberto')) {
+        resposta.style.maxHeight = '200px';
+        seta.style.transform = 'rotate(180deg)';
+      } else {
+        resposta.style.maxHeight = '0';
+        seta.style.transform = 'rotate(0deg)';
+      }
+    }
+  </script>
+
+</body>
+</html>
